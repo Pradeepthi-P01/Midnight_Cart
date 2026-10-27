@@ -15,7 +15,10 @@
 ## 📖 The Problem Statement: The "2 AM" Quick-Commerce Paradox
 
 ### 1. Business Context & The Story
-**Midnight Cart** is a quick-commerce **dark store** (a localized micro-warehouse dedicated strictly to rapid home delivery) serving university campus hostels and student housing. The store promises delivery in **~15 minutes**, serving college students who order late-night study fuel—Maggi noodles, energy drinks, snacks, and phone chargers—especially during high-stress exam periods at 1 AM.
+**Midnight Cart** is a quick-commerce **dark store** serving university campus hostels and student housing. The store promises delivery in **~15 minutes**, serving college students who order late-night study fuel—Maggi noodles, energy drinks, snacks, and phone chargers—especially during high-stress exam periods at 1 AM.
+
+> 💡 **What is a "Dark Store"?**  
+> A dark store (similar to **Blinkit**, **Zepto**, or **Swiggy Instamart**) is a hyper-local micro-fulfillment center that is **closed to the walk-in public**. Instead of ordinary retail shopping aisles, it operates like a high-speed mini-warehouse where staff ("pickers") pack online orders in under 90 seconds, and delivery riders rush them to hostel gates within 10–15 minutes.
 
 ### 2. The Core Paradox
 Over the past 90 days, the business experienced a baffling operational divergence:
