@@ -1,13 +1,14 @@
 # 🌙 Midnight Cart: The 2 AM Problem — Quick-Commerce Optimization & ML Engine
 
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://midnight-cart.streamlit.app/)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
-[![Streamlit App](https://img.shields.io/badge/Streamlit-1.46.0-FF4B4B.svg)](https://streamlit.io/)
 [![Scikit-Learn](https://img.shields.io/badge/scikit--learn-1.4%2B-F7931E.svg)](https://scikit-learn.org/)
 [![Pandas](https://img.shields.io/badge/Pandas-2.0%2B-150458.svg)](https://pandas.pydata.org/)
 [![Status](https://img.shields.io/badge/Status-Production%20Ready-success.svg)](#)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-> **An end-to-end data engineering, predictive machine learning, and unit economics optimization platform for a 15-minute university campus dark store.**  
+> 🚀 **Live Interactive Demo:** **[https://midnight-cart.streamlit.app/](https://midnight-cart.streamlit.app/)**  
+> **An end-to-end data engineering, predictive machine learning, and unit economics optimization platform for a 15-minute campus micro-fulfillment center.**  
 > Diagnoses root causes of surging late-night order cancellations, models checkout risk without data leakage, and delivers actionable operational and pricing interventions yielding **+₹11,674 (+14.9%) net profit expansion**.
 
 ---
@@ -227,7 +228,10 @@ Accuracy           : 72.8%  (Deliberately deprioritized due to class imbalance)
 
 ## 🖥️ Interactive Operations Simulator (Streamlit App)
 
-The repository includes a live executive simulation tool (`src/app.py`):
+> 🌐 **Experience the Live Web App:** **[https://midnight-cart.streamlit.app/](https://midnight-cart.streamlit.app/)**  
+> Access the executive simulator directly in your browser without any local setup.
+
+Or run locally via terminal:
 
 ```powershell
 streamlit run src/app.py
