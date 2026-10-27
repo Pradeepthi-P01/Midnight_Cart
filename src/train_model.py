@@ -53,7 +53,7 @@ def train_and_evaluate(data_path="src/clean_orders.csv"):
     auc = roc_auc_score(y_test, y_prob)
     
     print("\n" + "="*50)
-    print("SLIDE 4: MODEL EVALUATION ON UNSEEN ORDERS")
+    print("PHASE 2: MODEL EVALUATION ON UNSEEN ORDERS")
     print("="*50)
     print(f"Recall (Class 1)   : {rec:.2%} (Share of true cancellations caught)")
     print(f"Precision (Class 1): {prec:.2%} (Share of flagged orders really cancelled)")

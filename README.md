@@ -75,7 +75,7 @@ Midnight_Cart/
 ├── requirements.txt                   # Production Python package dependencies
 │
 ├── plan/
-│   └── FINAL_IMPLEMENTATION_PLAN.md   # Complete strategic blueprint & financial working
+│   └── IMPLEMENTATION_PLAN.md         # Complete strategic blueprint & financial working
 │
 ├── src/                               # Modular execution engine
 │   ├── data_pipeline.py               # Data sanitation, deduplication & sensor imputation
@@ -85,7 +85,7 @@ Midnight_Cart/
 │   ├── run_all.py                     # Master runner (executes complete pipeline in 4s)
 │   └── app.py                         # Streamlit Executive Ops Simulator (Interactive Cockpit)
 │
-└── Student_Pack/                      # Raw transactional order data
+└── data/                              # Raw transactional order data
     └── midnight_cart_orders.csv       # Raw transactional order log (2,784 records)
 ```
 
@@ -109,7 +109,7 @@ Before performing analytics or modeling, the raw dataset (`midnight_cart_orders.
 
 ### Raw Dataset Schema & Data Dictionary (18 Attributes)
 
-The raw transactional dataset (`Student_Pack/midnight_cart_orders.csv`) contains 2,784 records logged across 90 days:
+The raw transactional dataset (`data/midnight_cart_orders.csv`) contains 2,784 records logged across 90 days:
 
 | Attribute | Type | Operational Meaning |
 |---|---|---|

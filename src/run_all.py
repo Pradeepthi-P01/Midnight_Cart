@@ -1,5 +1,5 @@
 """
-Midnight Cart: Master Execution Runner (IIT Roorkee × Masai 2026)
+Midnight Cart: Master Execution Runner (IIT Roorkee Dark Store)
 Run: python src/run_all.py
 """
 
@@ -32,7 +32,7 @@ def main():
     coupon_policy.audit_coupon_policy()
     
     # Step 3: Train & Evaluate Leakage-Free Model
-    print_banner("STEP 3: TRAINING LEAKAGE-FREE ML MODEL (SLIDE 4)")
+    print_banner("STEP 3: TRAINING LEAKAGE-FREE ML MODEL (PHASE 2)")
     import train_model
     train_model.train_and_evaluate()
     
@@ -53,18 +53,18 @@ def main():
     │ TOTAL 90-DAY PROJECTED PROFIT          │ Rs. 89,857             │
     └────────────────────────────────────────┴────────────────────────┘
 
-    KEY TAKEAWAYS FOR THE PITCH:
-    1. Slide 1 (Data): 2,784 raw -> 2,685 clean rows; caught 16 zero-rider sensor drops.
-    2. Slide 2 (Fleet): Roster cut 50% at 23:00 -> ETA 20m -> cancels spike to 40% (71% exam).
-    3. Slide 3 (Economics): Electronics = 8.6% orders, but 60% of lost profit! FIRST50 burns Rs.18.50/ord.
-    4. Slide 4 (Model): Logistic Regression Recall: 64%, Precision: 31%, AUC: 0.78 (no leakage).
-    5. Slide 5 (Decisions): Fix coupons (+Rs.7k), re-time fleet (+Rs.3.7k), fast-lane tech (+Rs.1k).
+    EXECUTIVE TAKEAWAYS & OPERATIONAL DISCOVERIES:
+    1. Data Pipeline: 2,784 raw -> 2,685 clean rows; caught 16 zero-rider sensor drops.
+    2. Fleet Bottleneck: Roster cut 50% at 23:00 -> ETA 20m -> cancels spike to 40% (71% exam).
+    3. Unit Economics: Electronics = 8.6% orders, but 60% of lost profit! FIRST50 burns Rs.18.50/ord.
+    4. Risk Model: Logistic Regression Recall: 64%, Precision: 31%, AUC: 0.78 (no leakage).
+    5. Interventions: Fix coupons (+Rs.7k), re-time fleet (+Rs.3.7k), fast-lane tech (+Rs.1k).
     
-    TO LAUNCH THE LIVE Q&A SIMULATOR:
+    TO LAUNCH THE INTERACTIVE OPS SIMULATOR:
     streamlit run src/app.py
     """)
     print("=" * 70)
-    print("ALL SYSTEMS TESTED & PRODUCTION READY FOR THE HACKATHON!")
+    print("ALL SYSTEMS TESTED & PRODUCTION OPERATIONALIZED!")
     print("=" * 70 + "\n")
 
 if __name__ == "__main__":

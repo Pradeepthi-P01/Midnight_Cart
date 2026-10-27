@@ -7,7 +7,7 @@ import os
 import pandas as pd
 import numpy as np
 
-def run_pipeline(input_path="Student_Pack/midnight_cart_orders.csv", output_path="src/clean_orders.csv"):
+def run_pipeline(input_path="data/midnight_cart_orders.csv", output_path="src/clean_orders.csv"):
     print(f"Loading raw data from: {input_path}")
     df = pd.read_csv(input_path)
     initial_shape = df.shape

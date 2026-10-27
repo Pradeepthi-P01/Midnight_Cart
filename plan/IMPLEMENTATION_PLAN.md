@@ -1,8 +1,8 @@
-# 🏆 Midnight Cart: Final Master Implementation Plan
+# 🏆 Midnight Cart: Master Implementation Plan
 
-> **IIT Roorkee × Masai · Campus Immersion 2026**  
+> **Campus Quick-Commerce Operations Engine & Decision Blueprint**  
 > **Single Source of Truth:** Recomputed & mathematically verified from `midnight_cart_orders.csv` across 2,685 clean orders.  
-> **Executive Owner:** Rohan Mehta (City Operations Head) & The Consulting Team  
+> **Executive Owner:** Rohan Mehta (City Operations Head) & The Operations Consulting Team  
 
 ---
 
@@ -52,35 +52,20 @@ The Midnight Cart Product Model synchronizes the customer app, predictive risk s
 
 ## 2. Recommended Tech Stack Architecture (The 3-Tier Winning Stack)
 
-To win this 6-hour hackathon, we strictly avoid the trap of writing custom HTML/CSS/JavaScript. Custom web stacks waste 3–4 hours on frontend plumbing with zero extra rubric points. Instead, we deploy a **3-tier data-science-first stack**:
-
 ```
 ┌────────────────────────────────────────────────────────────────────────────────────────┐
-│                              THE 3-TIER HACKATHON STACK                                │
+│                                   THE 3-TIER STACK                                     │
 ├────────────────────────────────────────────────────────────────────────────────────────┤
-│ Tier 1: Hackathon Core Engine (Mandatory Scored Colab Submission)                      │
-│         Python · Pandas · SQLite3 · Scikit-Learn · Seaborn · Colab                     │
+│ Tier 1: Core Engine                                                                    │
+│         Python · Pandas · SQLite3 · Scikit-Learn · Seaborn                             │
 │                                                                                        │
-│ Tier 2: The Interactive Secret Weapon (Judge Q&A Ops Simulator)                        │
-│         Streamlit · Plotly Express (Zero frontend boilerplate · Built in 15 mins)      │
+│ Tier 2: The Interactive Ops Simulator                                                  │
+│         Streamlit · Plotly Express (Interactive scenario testing & risk scoring)       │
 │                                                                                        │
-│ Tier 3: The Stage Presentation (The 5 Slides · 6-Minute Pitch)                         │
-│         Google Slides / Canva (High Contrast · Bold Headings · 1 Chart per Slide)      │
+│ Tier 3: Production Scale Architecture                                                  │
+│         ClickHouse, FastAPI, Kafka, React Native                                       │
 └────────────────────────────────────────────────────────────────────────────────────────┘
 ```
-
-### Detailed Tech Stack Specifications
-
-| Layer / Tier | Technology Used | Exact Purpose & Rationale |
-| :--- | :--- | :--- |
-| **Data Ingestion & Cleaning** | **Python, Pandas, NumPy** | Cleans 84 duplicates, parses dual date styles, standardizes 25 zones, and imputes the Sept 9 sensor dropout in under 30 lines. |
-| **SQL & Exploratory Analytics** | **`sqlite3` (inside Python/Colab)** | Fulfills the official brief's SQL requirement; enables pure SQL aggregations on `df_clean`. |
-| **Visualizations for Slides** | **Seaborn, Matplotlib** | Generates high-resolution, static charts (dual-axis fleet graphs, margin waterfalls) for insertion into slides. |
-| **Predictive Modeling** | **Scikit-learn** | Leakage-free `LogisticRegression` pipeline with `ColumnTransformer`, `StandardScaler`, and `OneHotEncoder`. |
-| **Live Q&A Simulator (UI)** | **Streamlit** (Python) | Interactive executive dashboard (`app.py`) with sliders for Rohan's fleet and coupon parameters. Tested and launched with `streamlit run app.py`. |
-| **Interactive UI Plotting** | **Plotly Express** | Interactive hover-tooltips and live graphs inside the Streamlit dashboard during judge Q&A. |
-| **Stage Pitch Deck** | **Google Slides / Canva** | 5 clean, uncluttered slides designed for 4+ speakers to finish in 5:45. |
-| **Production Scale Architecture** *(When judges ask about future scale)* | **ClickHouse, FastAPI, Kafka, React Native** | The real-world production stack to handle 50,000 orders/day across 10 campus dark stores. |
 
 ---
 
@@ -97,7 +82,7 @@ D:\Midnight_Cart\
 ├── .gitignore                         # Comprehensive ignore rules
 │
 ├── plan\                             <-- STRATEGY & MASTER BLUEPRINTS
-│   └── FINAL_IMPLEMENTATION_PLAN.md   # Master operational blueprint & financial working
+│   └── IMPLEMENTATION_PLAN.md         # Master operational blueprint & financial working
 │
 ├── src\                              <-- MODULAR PYTHON EXECUTION ENGINE
 │   ├── data_pipeline.py               # Phase 0: Data sanitation, deduplication & imputation
@@ -107,14 +92,14 @@ D:\Midnight_Cart\
 │   ├── run_all.py                     # Single-command runner (executes all steps in 4s)
 │   └── app.py                         # Streamlit Executive Ops Simulator & Command Cockpit
 │
-└── Student_Pack\                      <-- RAW DATA ASSETS (READ-ONLY)
+└── data\                             <-- RAW DATA ASSETS (READ-ONLY)
     └── midnight_cart_orders.csv       # Raw transactional order log (2,784 rows)
 ```
 
 ### Folder Roles & Boundaries:
 1. **`plan/`:** High-level strategic decisions, mathematical working, and operational governance.
 2. **`src/`:** The core engineering engine. All data pipelines, financial auditing routines, ML models, and the Streamlit simulator live here.
-3. **`Student_Pack/`:** Untouched raw input data log.
+3. **`data/`:** Untouched raw input data log.
 
 ---
 

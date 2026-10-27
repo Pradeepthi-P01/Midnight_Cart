@@ -1,6 +1,5 @@
 """
 🌙 Midnight Cart: Executive Operations Simulator
-Author: Senior Consulting Team (IIT Roorkee × Masai 2026)
 Run: streamlit run src/app.py
 """
 
@@ -69,7 +68,7 @@ model = load_model(df)
 
 # Header
 st.title("🌙 Midnight Cart: Executive Operations Simulator")
-st.caption("City Operations Head Command Cockpit · Rohan Mehta · IIT Roorkee × Masai Immersion 2026")
+st.caption("City Operations Head Command Cockpit · Rohan Mehta · IIT Roorkee Dark Store")
 
 # Top KPI Banner
 col1, col2, col3, col4 = st.columns(4)
