@@ -5,7 +5,7 @@
 [![Scikit-Learn](https://img.shields.io/badge/scikit--learn-1.4%2B-F7931E.svg)](https://scikit-learn.org/)
 [![Pandas](https://img.shields.io/badge/Pandas-2.0%2B-150458.svg)](https://pandas.pydata.org/)
 [![Status](https://img.shields.io/badge/Status-Production%20Ready-success.svg)](#)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](#)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 > **An end-to-end data engineering, predictive machine learning, and unit economics optimization platform for a 15-minute university campus dark store.**  
 > Diagnoses root causes of surging late-night order cancellations, models checkout risk without data leakage, and delivers actionable operational and pricing interventions yielding **+₹11,674 (+14.9%) net profit expansion**.
