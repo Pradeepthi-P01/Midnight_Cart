@@ -12,6 +12,31 @@
 
 ---
 
+## 📖 The Problem Statement: The "2 AM" Quick-Commerce Paradox
+
+### 1. Business Context & The Story
+**Midnight Cart** is a quick-commerce **dark store** (a localized micro-warehouse dedicated strictly to rapid home delivery) serving university campus hostels and student housing. The store promises delivery in **~15 minutes**, serving college students who order late-night study fuel—Maggi noodles, energy drinks, snacks, and phone chargers—especially during high-stress exam periods at 1 AM.
+
+### 2. The Core Paradox
+Over the past 90 days, the business experienced a baffling operational divergence:
+* 📈 **Order volume surged by +33%** due to strong campus word-of-mouth.
+* 📉 **Realised profit remained completely flat** (~₹78,000 across the entire 90-day cycle).
+* 🚨 **Late-night customer cancellations and complaints surged dramatically after 23:00 (11:00 PM)**.
+
+### 3. The Executive Dilemma
+City Operations Head **Rohan Mehta** can make **one major strategic intervention** next month:
+* **Option A:** Hire additional late-night delivery riders?
+* **Option B:** Overhaul the marketing coupon and discount policy?
+* **Option C:** Re-layout the dark store and change late-night SKU picking priority?
+
+To make the right call, Rohan commissioned an in-depth data audit to answer four fundamental business questions:
+1. **Who cancels?** What operational, behavioral, or geographical signals separate cancelled orders from fulfilled orders?
+2. **Where does the money bleed?** Exactly which operational hours, delivery zones, product categories, and promotional coupons are destroying margins?
+3. **Can cancellations be predicted early?** Can a machine learning model reliably flag cancellation risk *at checkout time* ($T=0$) before a rider is dispatched, without relying on post-outcome data leakage?
+4. **What concrete decisions should Rohan make?** Provide **3 evidence-backed decisions** with exact, mathematically audited Rupee (₹) calculations.
+
+---
+
 ## ⚡ Executive Summary: The 90-Day Reality
 
 Midnight Cart operates a campus quick-commerce dark store promising ~15-minute delivery. Over a 90-day period, order volume grew by **+33%**, yet realised profit remained flat and customer complaints surged after 23:00 (11:00 PM).
@@ -77,6 +102,31 @@ Before performing analytics or modeling, the raw dataset (`midnight_cart_orders.
 | **Target Leakage Columns** | Strictly excluded `rating` and `refund_inr` | These columns only exist post-cancellation; including them produces artificial 97% AUC leakage. |
 
 **Exported Dataset:** **2,685 verified, leak-free orders** saved to `src/clean_orders.csv`.
+
+### Raw Dataset Schema & Data Dictionary (18 Attributes)
+
+The raw transactional dataset (`Student_Pack/midnight_cart_orders.csv`) contains 2,784 records logged across 90 days:
+
+| Attribute | Type | Operational Meaning |
+|---|---|---|
+| `order_id` | String | Unique transactional order identifier (e.g., `MC-00001`). |
+| `order_datetime` | String | Timestamp when customer placed the order (mixed datetime strings). |
+| `hostel_zone` | String | Campus delivery destination (25 raw misspelled variants $\rightarrow$ 6 clean clusters). |
+| `items_count` | Integer | Total count of items in the cart basket. |
+| `basket_value_inr`| Numeric | Gross cart value in Indian Rupees (₹) before coupon discount. |
+| `discount_inr` | Numeric | Discount amount deducted from basket (₹). |
+| `top_category` | String | Primary category: `Snacks`, `Drinks`, `Instant food`, `Electronics`, `Stationery`, `Health`. |
+| `margin_pct` | Float | Product category gross margin percentage (e.g., 0.35 for Electronics). |
+| `payment_mode` | String | Payment settlement method: `UPI`, `Card`, or `Cash on delivery` (COD). |
+| `coupon_code` | String | Promo code applied: `NONE`, `FIRST50` (₹50 off), or `EXAM20` (20% off). |
+| `is_first_order` | String | Customer acquisition flag (`Y` = first order, `N` = repeat user). |
+| `exam_week` | String | Academic cycle flag (`Y` = mid/final exam weeks, `N` = regular weeks). |
+| `rain_mm` | Numeric | Rainfall telemetry in millimeters at the order hour. |
+| `riders_on_duty` | Integer | Active delivery fleet personnel working during that hour. |
+| `eta_shown_min` | Numeric | Estimated delivery time quoted to student at app checkout. |
+| `cancelled` | Integer | **Target Variable:** `1 = Cancelled`, `0 = Delivered successfully`. |
+| `rating` | Float | Post-delivery student rating (1–5; strictly blank on cancellations). |
+| `refund_inr` | Numeric | Refund amount issued (₹; post-cancellation variable). |
 
 ---
 
