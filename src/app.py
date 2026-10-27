@@ -3,6 +3,7 @@
 Run: streamlit run src/app.py
 """
 
+import os
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -38,8 +39,16 @@ st.markdown("""
 
 @st.cache_data
 def load_data():
-    df = pd.read_csv("src/clean_orders.csv")
-    return df
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    candidates = [
+        os.path.join(current_dir, "clean_orders.csv"),
+        "src/clean_orders.csv",
+        "clean_orders.csv"
+    ]
+    for p in candidates:
+        if os.path.exists(p):
+            return pd.read_csv(p)
+    raise FileNotFoundError("Could not locate clean_orders.csv")
 
 @st.cache_resource
 def load_model(df):
