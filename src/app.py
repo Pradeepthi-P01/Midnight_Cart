@@ -77,7 +77,7 @@ model = load_model(df)
 
 # Header
 st.title("🌙 Midnight Cart: Executive Operations Simulator")
-st.caption("City Operations Head Command Cockpit · Rohan Mehta · IIT Roorkee Dark Store")
+st.caption("City Operations Head Command Cockpit · Rohan Mehta · Micro-Fulfillment Center")
 
 # Top KPI Banner
 col1, col2, col3, col4 = st.columns(4)
