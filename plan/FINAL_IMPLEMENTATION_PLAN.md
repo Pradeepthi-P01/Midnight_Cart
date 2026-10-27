@@ -93,6 +93,7 @@ D:\Midnight_Cart\
 │
 ├── README.md                          # Master project documentation & system overview
 ├── requirements.txt                   # Production Python package dependencies
+├── LICENSE                            # MIT Open-Source License
 ├── .gitignore                         # Comprehensive ignore rules
 │
 ├── plan\                             <-- STRATEGY & MASTER BLUEPRINTS

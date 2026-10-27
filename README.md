@@ -70,6 +70,7 @@ Midnight Cart operates a campus quick-commerce dark store promising ~15-minute d
 ```
 Midnight_Cart/
 ├── .gitignore                         # Comprehensive Python, environment & cache ignore rules
+├── LICENSE                            # MIT Open-Source License
 ├── README.md                          # Master project documentation
 ├── requirements.txt                   # Production Python package dependencies
 │
